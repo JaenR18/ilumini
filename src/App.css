@@ -1,0 +1,18 @@
+.app-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.title {
+    margin-bottom: 10px;
+    color: white;
+}

@@ -1,13 +1,15 @@
 import React from "react";
 import { InputE } from "./components/InputE";
+import "./App.css"; 
+
 export const App = () => {
   return (
-    <body>
-      <div>Hello</div>
-      <div style={{display:'flex', alignItems:'center', justifyContent:'center' }}>
-        <InputE place="email" />
+    <div className="app-container">
+      <div className="input">    
+        <h2 className="title">ilimini</h2>
+        <InputE place="Email" />
         <InputE place="Password" />
       </div>
-    </body>
+    </div>
   );
 };

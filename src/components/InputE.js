@@ -6,7 +6,7 @@ export const InputE = ({place}) => {
 
     return (
     <>
-        <input  placeholder={place} value={data} onChange={(e) => setData(e.target.value)} style={{ width: 220, height: 30}}/>
+        <input  placeholder={place} value={data} onChange={(e) => setData(e.target.value)} style={{ width: 220, height: 30, backgroundColor: 'black'}}/>
     </>
   )
 }
