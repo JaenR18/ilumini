@@ -1,14 +1,22 @@
-import React, {useState} from 'react'
+import React from "react";
 
-export const InputE = ({place}) => {
+export const InputE = ({ place, value, onChange}) => {
 
-  const [data, setData ] = useState('');
-
-    return (
+  return (
     <>
-        <input  placeholder={place} value={data} onChange={(e) => setData(e.target.value)} style={{ width: 220, height: 30}}/>
+      <input
+        placeholder={place}
+        value={value} 
+        onChange={onChange}
+        style={{
+          width: 230,
+          height: 40,
+          backgroundColor: "black",
+          color: "white",
+          borderRadius: 8, 
+          borderWidth: 1
+        }}
+      />
     </>
-  )
-}
-
-
+  );
+};
