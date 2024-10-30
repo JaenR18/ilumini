@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { InputE } from "./components/InputE";
 import "./styles.css";
 import logo from "./logo.png";
+import { startLogin } from "./api/auth";
 
 export const App = () => {
   const [email, setEmail] = useState("");
@@ -20,11 +21,13 @@ export const App = () => {
           </div>
             <h3>ilumini</h3>
         </div>
-        
-        
+
         <InputE place="Email" />
         <InputE place="Password" />
+
+        <button type="submit" onClick={startLogin}>Login</button>
       </div>
+
     </>
   );
 };
