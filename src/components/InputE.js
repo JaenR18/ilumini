@@ -14,7 +14,8 @@ export const InputE = ({ place, value, onChange}) => {
           backgroundColor: "black",
           color: "white",
           borderRadius: 8, 
-          borderWidth: 1
+          borderWidth: 1,
+          padding: "0px 70px 0px 10px"
         }}
       />
     </>

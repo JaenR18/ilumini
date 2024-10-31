@@ -1,33 +1,76 @@
 .color {
-  margin: 0;
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   background-image: radial-gradient(
     closest-side,
-    rgba(120, 40, 804, 0.2),
+    rgba(255, 255, 255, 0.164),
     #000
   );
   z-index: -1;
 }
 
 .logo {
-  width: 50%;
-  height: 100%;
+  width: 60%;
+  height: 60%;
   object-fit: contain;
+  margin-left: 18px;
+  margin-top: 15px;
 }
 
 .container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  gap: 9px;
-  margin-top: 30vh;
+  margin-top: 20vh;
+  gap: 10px;
 }
+
+h3 {
+  margin-right: 40px;
+}
+
 .container-header {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   display: flex;
-  align-items: center;
   flex-direction: row;
-  margin-left: -1%;
+  align-items: center;  
+  font-size: 24px;
+}
+
+.remenber-forgot label input {
+  accent-color: black;
+  margin-right: 4px;
+}
+
+.remenber-forgot {
+  accent-color: black;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: 5px 0 10px;
+  margin-left: 4px;
+}
+
+.remenber-forgot a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14.5px;
+  margin-left: 73px;
+  margin-right: 10px;
+  margin-top: auto;
+}
+
+.remenber-forgot a:hover {
+  text-decoration: underline;
+}
+
+.button {
+  width: 20%;
+  height: 30px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  cursor: pointer;
 }
