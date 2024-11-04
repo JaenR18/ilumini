@@ -1,3 +1,4 @@
+/* ----radialGradient---- */
 .color {
   width: 90px;
   height: 90px;
@@ -8,69 +9,126 @@
   );
   z-index: -1;
 }
-
+/* ----logo and title---- */
 .logo {
   width: 60%;
   height: 60%;
   object-fit: contain;
-  margin-left: 18px;
   margin-top: 15px;
 }
+h3 {
+  margin-right: 40px;
+}
+p {
+  text-align: center;
+}
+input::placeholder {
+  padding-left: 10px;
+}
 
+/* ----inputs---- */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-top: 20vh;
-  gap: 10px;
-}
-
-h3 {
-  margin-right: 40px;
+  gap: 10px;  
+  font-family: 'Inter_18pt';
+  font-size: smaller; 
+  text-align: center; 
 }
 
 .container-header {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'KronaOne-Regular';
   display: flex;
   flex-direction: row;
   align-items: center;  
-  font-size: 24px;
+  font-size: 20px;
 }
 
-.remenber-forgot label input {
-  accent-color: black;
-  margin-right: 4px;
-}
-
-.remenber-forgot {
+.remember-forgot {
   accent-color: black;
   display: flex;
   justify-content: space-between;
   font-size: 14.5px;
-  margin: 5px 0 10px;
-  margin-left: 4px;
+  margin: 10px;
+  margin-left: 5px;
+  border-bottom: 1px solid #fff; 
+  padding-bottom: 10px; 
+  font-size: small;   
+}
+.remember-forgot label input {
+  accent-color: black;
+  margin-right: 4px;
 }
 
-.remenber-forgot a {
+.remember-forgot a {
   color: #fff;
   text-decoration: none;
   font-size: 14.5px;
   margin-left: 73px;
   margin-right: 10px;
   margin-top: auto;
+  font-size: small; 
 }
 
-.remenber-forgot a:hover {
+.remember-forgot a:hover {
   text-decoration: underline;
 }
 
 .button {
-  width: 20%;
-  height: 30px;
+  width: 60%; 
+  height: 40px;
   background: #fff;
   border: none;
   outline: none;
-  border-radius: 40px;
+  border-radius: 10px;
   cursor: pointer;
+  margin-top: 10px; 
+}
+
+/* botton google */
+.google-button {       
+  flex-direction: column;     
+  background-color: #000000;
+  color: white;    
+  border: 1px solid white;
+  border-radius: 5px;
+  border-color: #fff;
+  cursor: pointer;    
+  padding: 10px;  
+}
+
+.google-button:hover {
+  background-color: #737375a8;  
+}
+
+.google-button svg {  
+  padding-top: 1px;  
+  /* width: 10px;   */
+  /* height: 20px; */
+  margin-right: 5px; 
+  margin-left: 0px; 
+}
+
+.separator {
+  text-align: center;
+  margin: 10px 0;
+  font-family: 'Inter_18pt';  
+}
+
+
+/* ----font---- */
+@font-face {
+  font-family: 'KronaOne-Regular';
+  src: url('./assets/font/logo/KronaOne-Regular.ttf') format('truetype');  
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Inter_18pt';
+  src: url('./assets/font/body-login/static/Inter_18pt-ExtraLight.ttf') format('truetype');  
+  font-weight: normal;
+  font-style: normal;
 }
