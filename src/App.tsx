@@ -1,9 +1,10 @@
 import { InputE } from "./components/InputE";
-import { startLogin } from "./api/auth";
 import logo from "./assets/image/logo.png"
 import "./styles.css";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { GoogleIcon } from "./assets/icon/GoogloIcon";
+import { startLogin } from "./api/auth";
+import { CardComponent } from "./components/Card";
 
 export const App = () => {
   const {
@@ -13,9 +14,10 @@ export const App = () => {
   } = useForm<FormValues>();
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
-    const { email, password } = data;
-    console.log(data);
+    const {password, email} = data;
+
     startLogin(email, password);
+
   };
 
   return (
@@ -28,7 +30,7 @@ export const App = () => {
       </div>
       <p>Donde cada conexión enciende nuevas oportunidades.</p>
             
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)}  style={{ display: 'flex', flexDirection: 'column', alignItems:'center' }}>
         <InputE
           place="Correo"
           register={register("email", {
@@ -46,14 +48,14 @@ export const App = () => {
           place="Contraseña"
           register={register("password", {
             required: "La contraseña es obligatoria",
-            minLength: {
-              value: 8,
-              message: "La contraseña debe tener al menos 8 caracteres",
-            },
-            pattern: {
-              value: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/,
-              message: "La contraseña debe contener letras y números",
-            },
+            // minLength: {
+            //   value: 8,
+            //   message: "La contraseña debe tener al menos 8 caracteres",
+            // },
+            // pattern: {
+            //   value: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/,
+            //   message: "La contraseña debe contener letras y números",
+            // },
           })}
           type="password"
         />
@@ -74,7 +76,7 @@ export const App = () => {
 
         <div className="separator">o</div>
 
-        <button className="google-button" type="button">          
+        <button className="google-button" type="button" style={{ display: 'flex' }}>          
           <GoogleIcon height="15"/>
           Continuar con Google
         </button>
