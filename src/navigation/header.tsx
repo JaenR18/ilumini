@@ -5,7 +5,7 @@ import { IoChatbubbleOutline } from 'react-icons/io5';
 import starLogo from '../images/logoStar.png';
 import profilePic from '../images/lanita.png';
 import theme from '../theme'; //de la pantalla de temas 
-
+//--------------------------------------------------------------------------------------------------------
 const Header: React.FC = () => {
     const location = useLocation();
     const navigate = useNavigate();
@@ -33,5 +33,6 @@ const Header: React.FC = () => {
         </header>
     );
 };
+//---------------------------------------------------------------------------------------------------------
 
 export default Header;
