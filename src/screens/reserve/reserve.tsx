@@ -1,7 +1,7 @@
 // src/screens/Reserve.tsx
 import React from 'react';
 
-const reserve: React.FC = () => {
+const Reserve: React.FC = () => {
     return (
         <div>
             <h1>Reserva</h1>
@@ -10,4 +10,4 @@ const reserve: React.FC = () => {
     );
 };
 
-export default reserve;
+export default Reserve;
