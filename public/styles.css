@@ -1,4 +1,4 @@
-body{
+/* body{
     background-color: black;
     overflow-x: hidden;
 }
@@ -9,5 +9,5 @@ body{
     position: absolute;
     top: -150px;
     left: 15%;
-    z-index: -1; /* esto es para colocar el gradiente detras */
-}
+    z-index: -1; 
+} */

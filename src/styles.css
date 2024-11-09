@@ -90,7 +90,7 @@ input::placeholder {
 
 /* botton google */
 .google-button {       
-  flex-direction: column;     
+  flex-direction: row;     
   background-color: #000000;
   color: white;    
   border: 1px solid white;
@@ -104,13 +104,13 @@ input::placeholder {
   background-color: #737375a8;  
 }
 
-.google-button svg {  
-  padding-top: 1px;  
-  /* width: 10px;   */
-  /* height: 20px; */
+/* .google-button svg {   */
+  /*padding-top: 1px;  
+   width: 10px;   */
+  /* height: 20px; 
   margin-right: 5px; 
-  margin-left: 0px; 
-}
+  margin-left: 0px; */
+/* } */
 
 .separator {
   text-align: center;
