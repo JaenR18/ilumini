@@ -24,3 +24,18 @@
     "src"
   ]
 }
+   /*  "compilerOptions": {
+      "target": "es6", // Versión de ECMAScript para el output
+      "module": "commonjs",
+      "jsx": "react-jsx", // Para proyectos con React 17+
+      "moduleResolution": "node",
+      "allowJs": true,
+      "checkJs": false,
+      "skipLibCheck": true,
+      "strict": true, // Opcional: activa todas las comprobaciones estrictas
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true
+    },
+    "include": ["src"], // Asegura que solo se incluyan los archivos en "src"
+    "exclude": ["node_modules"] // Excluye los archivos en "node_modules"
+  } */

@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+<<<<<<< HEAD
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -18,3 +19,12 @@ root.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 //creo que este se edita para forma general 
+=======
+import { App } from './App';
+
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+
+root.render(
+  <App/>
+);
+>>>>>>> feature/Login
