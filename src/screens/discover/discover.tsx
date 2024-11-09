@@ -1,7 +1,7 @@
 // src/screens/Discover.tsx
 import React from 'react';
 
-const discover: React.FC = () => {
+const Discover: React.FC = () => {
     return (
         <div>
             <h1>Descubre</h1>
@@ -10,4 +10,4 @@ const discover: React.FC = () => {
     );
 };
 
-export default discover;
+export default Discover;
