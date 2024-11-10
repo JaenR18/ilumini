@@ -37,11 +37,11 @@ const theme = {
         fontWeight: 'bolder',
         marginLeft: 10,
         zIndex: 1,
-        fontStyle: 'Krona One'
+        fontStyle: 'Krona One',
     } as React.CSSProperties,
     nav: {
         display: 'flex',
-        gap: '20px',
+        marginLeft:'60px'
     } as React.CSSProperties,
     link: {
         textDecoration: 'none',
@@ -51,6 +51,9 @@ const theme = {
     } as React.CSSProperties,
     activeLink: {
         borderBottom: '2px solid #fff',
+    } as React.CSSProperties,
+    linkWithMargin: {
+        marginRight: '10px', 
     } as React.CSSProperties,
     rightIcons: {
         display: 'flex',

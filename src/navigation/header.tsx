@@ -1,17 +1,21 @@
 // src/components/Header.tsx
 import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { IoChatbubbleOutline } from 'react-icons/io5';
+import { IoChatbubbleOutline, IoNotificationsOutline } from 'react-icons/io5'; // Importamos el icono de notificaciones
 import starLogo from '../images/logoStar.png';
-import profilePic from '../images/lanita.png';
-import theme from '../theme'; //de la pantalla de temas 
-//--------------------------------------------------------------------------------------------------------
+import profilePic from '../images/me.jpg';
+import theme from '../theme';
+
 const Header: React.FC = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
     const handleMessagesClick = () => {
         navigate('/messages');
+    };
+
+    const handleNotificationsClick = () => {
+        navigate('/notifications'); 
     };
 
     return (
@@ -23,19 +27,16 @@ const Header: React.FC = () => {
             </div>
             <nav style={theme.nav}>
                 <Link to="/" style={{ ...theme.link, ...(location.pathname === "/" && theme.activeLink) }}>Inicio</Link>
-                <Link to="/discover" style={{ ...theme.link, ...(location.pathname === "/discover" && theme.activeLink) }}>Descubre</Link>
-                <Link to="/reserve" style={{ ...theme.link, ...(location.pathname === "/reserve" && theme.activeLink) }}>Reserva</Link>
+                <Link to="/discover" style={{ ...theme.link, ...theme.linkWithMargin, ...(location.pathname === "/discover" && theme.activeLink) }}>Descubre</Link>
+                <Link to="/reserve" style={{ ...theme.link, ...theme.linkWithMargin, ...(location.pathname === "/reserve" && theme.activeLink) }}>Acerca de</Link>
             </nav>
             <div style={theme.rightIcons}>
-                <IoChatbubbleOutline style={theme.icon} onClick={handleMessagesClick} />
+                <IoNotificationsOutline style={theme.icon} onClick={handleNotificationsClick} /> {/* Icono de notificaciones */}
+                <IoChatbubbleOutline style={{ ...theme.icon, marginLeft: '10px' }} onClick={handleMessagesClick} />
                 <img src={profilePic} alt="Profile" style={theme.profilePic} />
             </div>
         </header>
     );
 };
-//---------------------------------------------------------------------------------------------------------
-//--------------------------------------------------------------------------------------------------------
-//........................................................................................................
-//es por el commmit
 
 export default Header;

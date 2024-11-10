@@ -5,7 +5,8 @@ import Header from './navigation/header';//el header
 import Home from './screens/home/homeScreen';//screen de home 
 import Messages from './screens/mensajes/Messages';//screen de mensajes
 import Discover from './screens/discover/discover';//screen de discover
-import Reserve from './screens/reserve/reserve'; //screen de reserva
+import Reserve from './screens/acercade/acerca';
+
 
 const App: React.FC = () => {
 
