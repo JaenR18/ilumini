@@ -41,7 +41,7 @@ const theme = {
     } as React.CSSProperties,
     nav: {
         display: 'flex',
-        marginLeft:'60px'
+        marginLeft:'600px'//para que este al otro lado de la screen
     } as React.CSSProperties,
     link: {
         textDecoration: 'none',
@@ -69,6 +69,30 @@ const theme = {
         height: 40,
         borderRadius: '50%',
         objectFit: 'cover',
+    } as React.CSSProperties,
+    searchContainer: {
+        display: 'flex',
+        alignItems: 'center',
+        position: 'relative',
+        marginLeft: '20px',
+        width: '300px',
+    } as React.CSSProperties,
+
+    searchIcon: { //icono search 
+        position: 'absolute',
+        left: '10px',
+        color: 'gray',
+        fontSize: '18px',
+    } as React.CSSProperties,
+
+    searchInput: {
+        padding: '5px 10px 5px 30px', // spacio del icono y el texto
+        fontSize: '14px',
+        borderRadius: '4px',
+        border: '1px solid gray',
+        backgroundColor: '#333',
+        color: '#fff',
+        width: '100%',
     } as React.CSSProperties,
 };
 

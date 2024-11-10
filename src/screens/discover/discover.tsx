@@ -1,15 +1,15 @@
 import React from 'react';
 import { IoHeartOutline, IoChatbubbleOutline, IoPaperPlaneOutline } from 'react-icons/io5';
 import userImage from '../../images/user.jpg';
-import postImage from '../../images/post2.jpg'; 
+import postImage from '../../images/post2.jpg';
 
 const Discover: React.FC = () => {
     const posts = [
         {
             id: 1,
-            imageUrl: postImage, 
+            imageUrl: postImage,
             username: 'Memories',
-            userImage: userImage, 
+            userImage: userImage,
             likes: 1200,
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt erat elementum egestas facilisi.',
         },
@@ -33,15 +33,14 @@ const Discover: React.FC = () => {
                         </div>
                         <span style={styles.likeText}>{post.likes} Me gusta</span>
                         <p style={styles.postDescription}>{post.description}</p>
-                        <span style={styles.commentsLink}>Ver 30 comentarios</span>
+                        <span style={styles.commentsText}>Ver 30 comentarios</span>
+                        <span style={styles.addCommentText}>Añadir comentario</span> 
                     </div>
                 </div>
             ))}
         </div>
     );
 };
-
-
 
 const styles = {
     container: {
@@ -58,11 +57,11 @@ const styles = {
         fontWeight: 'bold',
         marginBottom: '20px',
         color: '#fff',
-        width: '37%', // pos del titulo
+        width: '37%',
         textAlign: 'left',
     } as React.CSSProperties,
     postCard: {
-        backgroundColor: 'black', // el negro del fondo 
+        backgroundColor: 'black',
         borderRadius: '10px',
         width: '600px',
         padding: '15px',
@@ -97,7 +96,7 @@ const styles = {
         justifyContent: 'flex-start',
         gap: '15px',
         color: '#fff',
-        marginBottom: '5px', 
+        marginBottom: '5px',
     } as React.CSSProperties,
     icon: {
         color: '#fff',
@@ -115,11 +114,17 @@ const styles = {
         color: '#ccc',
         marginTop: '10px',
     } as React.CSSProperties,
-    commentsLink: {
+    commentsText: {
         fontSize: '12px',
         color: '#888',
-        cursor: 'pointer',
         marginTop: '8px',
+        display: 'block', 
+    } as React.CSSProperties,
+    addCommentText: {
+        fontSize: '12px',
+        color: '#888',
+        marginTop: '4px', 
+        display: 'block', 
     } as React.CSSProperties,
 };
 

@@ -1,7 +1,6 @@
-// src/components/Header.tsx
 import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { IoChatbubbleOutline, IoNotificationsOutline } from 'react-icons/io5'; // Importamos el icono de notificaciones
+import { IoChatbubbleOutline, IoNotificationsOutline, IoSearchOutline } from 'react-icons/io5';
 import starLogo from '../images/logoStar.png';
 import profilePic from '../images/me.jpg';
 import theme from '../theme';
@@ -15,7 +14,7 @@ const Header: React.FC = () => {
     };
 
     const handleNotificationsClick = () => {
-        navigate('/notifications'); 
+        navigate('/notifications');
     };
 
     return (
@@ -24,6 +23,15 @@ const Header: React.FC = () => {
                 <div style={theme.logoBackground}></div>
                 <img src={starLogo} alt="Ilumini Logo" style={theme.logo} />
                 <span style={theme.logoText}>ilumini</span>
+
+            
+                <div style={theme.searchContainer}>
+                    <IoSearchOutline style={theme.searchIcon} />
+                    <input
+                        type="search"
+                        style={theme.searchInput}
+                    />
+                </div>
             </div>
             <nav style={theme.nav}>
                 <Link to="/" style={{ ...theme.link, ...(location.pathname === "/" && theme.activeLink) }}>Inicio</Link>
@@ -31,7 +39,7 @@ const Header: React.FC = () => {
                 <Link to="/reserve" style={{ ...theme.link, ...theme.linkWithMargin, ...(location.pathname === "/reserve" && theme.activeLink) }}>Acerca de</Link>
             </nav>
             <div style={theme.rightIcons}>
-                <IoNotificationsOutline style={theme.icon} onClick={handleNotificationsClick} /> {/* Icono de notificaciones */}
+                <IoNotificationsOutline style={theme.icon} onClick={handleNotificationsClick} />
                 <IoChatbubbleOutline style={{ ...theme.icon, marginLeft: '10px' }} onClick={handleMessagesClick} />
                 <img src={profilePic} alt="Profile" style={theme.profilePic} />
             </div>
