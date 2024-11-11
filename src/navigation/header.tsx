@@ -4,13 +4,17 @@ import { IoChatbubbleOutline, IoNotificationsOutline, IoSearchOutline } from 're
 import starLogo from '../images/logoStar.png';
 import profilePic from '../images/me.jpg';
 import theme from '../theme';
-
+//aun falta componer header spaces
+//pic user en el main de sms
+//add scren de comments?
+//add info en el user del post
 const Header: React.FC = () => {
     const location = useLocation();
     const navigate = useNavigate();
+    const [showMessages, setShowMessages] = React.useState(false);
 
     const handleMessagesClick = () => {
-        navigate('/messages');
+        setShowMessages(!showMessages);
     };
 
     const handleNotificationsClick = () => {
@@ -24,13 +28,9 @@ const Header: React.FC = () => {
                 <img src={starLogo} alt="Ilumini Logo" style={theme.logo} />
                 <span style={theme.logoText}>ilumini</span>
 
-            
                 <div style={theme.searchContainer}>
                     <IoSearchOutline style={theme.searchIcon} />
-                    <input
-                        type="search"
-                        style={theme.searchInput}
-                    />
+                    <input type="search" style={theme.searchInput} /> 
                 </div>
             </div>
             <nav style={theme.nav}>
@@ -43,6 +43,23 @@ const Header: React.FC = () => {
                 <IoChatbubbleOutline style={{ ...theme.icon, marginLeft: '10px' }} onClick={handleMessagesClick} />
                 <img src={profilePic} alt="Profile" style={theme.profilePic} />
             </div>
+
+            {showMessages && (
+                <div style={theme.messageList}>
+                    <div style={theme.messageTitle}>Mensajería</div>
+                    <div style={theme.messageSearchContainer}>
+                        <IoSearchOutline style={theme.searchIcon} />
+                        <input type="search" style={theme.messageSearchInput} /> 
+                    </div>
+                    {Array(3).fill(null).map((_, index) => (    //arreglo de sms
+                        <div key={index} style={theme.messageItem}>
+                            <div style={theme.messageUser}>Montelimar</div>
+                            <p style={theme.messageText}>El precio de la habitacion hoy es...</p>
+                            <span style={theme.messageDate}>3 días</span> 
+                        </div>
+                    ))}
+                </div>
+            )}
         </header>
     );
 };

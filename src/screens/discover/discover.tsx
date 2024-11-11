@@ -8,17 +8,17 @@ const Discover: React.FC = () => {
         {
             id: 1,
             imageUrl: postImage,
-            username: 'Memories',
+            username: 'Montelimar',
             userImage: userImage,
-            likes: 1200,
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt erat elementum egestas facilisi.',
+            likes: 1600,
+            description: 'Una noche de paz y tranquilidad en Montelimar, ven y se parte de este experiencia!', //sms de post
         },
     ];
 
     return (
         <div style={styles.container}>
             <h1 style={styles.heading}>Publicaciones sugeridas</h1>
-            {posts.map((post) => (
+            {posts.map((post) => ( //puedo añadir mas x el scroll
                 <div key={post.id} style={styles.postCard}>
                     <div style={styles.userInfo}>
                         <img src={post.userImage} alt="User" style={styles.userImage} />
@@ -33,7 +33,7 @@ const Discover: React.FC = () => {
                         </div>
                         <span style={styles.likeText}>{post.likes} Me gusta</span>
                         <p style={styles.postDescription}>{post.description}</p>
-                        <span style={styles.commentsText}>Ver 30 comentarios</span>
+                        <span style={styles.commentsText}>Ver 10 comentarios</span>
                         <span style={styles.addCommentText}>Añadir comentario</span> 
                     </div>
                 </div>
@@ -41,6 +41,7 @@ const Discover: React.FC = () => {
         </div>
     );
 };
+//los estilos del post
 
 const styles = {
     container: {
@@ -87,7 +88,7 @@ const styles = {
         borderRadius: '10px',
         marginBottom: '15px',
     } as React.CSSProperties,
-    postContent: {
+    postContent: {            
         padding: '10px 0',
     } as React.CSSProperties,
     postFooter: {
