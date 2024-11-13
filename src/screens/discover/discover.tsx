@@ -10,19 +10,24 @@ const Discover: React.FC = () => {
             imageUrl: postImage,
             username: 'Montelimar',
             userImage: userImage,
+            days:'3 días', //nuevoo
+            userHandle: '@montelimar',
             likes: 1600,
-            description: 'Una noche de paz y tranquilidad en Montelimar, ven y se parte de este experiencia!', //sms de post
+            description: 'Una noche de paz y tranquilidad en Montelimar, ven y se parte de esta experiencia!',
         },
     ];
 
     return (
         <div style={styles.container}>
             <h1 style={styles.heading}>Publicaciones sugeridas</h1>
-            {posts.map((post) => ( //puedo añadir mas x el scroll
+            {posts.map((post) => (
                 <div key={post.id} style={styles.postCard}>
                     <div style={styles.userInfo}>
                         <img src={post.userImage} alt="User" style={styles.userImage} />
-                        <span style={styles.username}>{post.username}</span>
+                        <div>
+                            <span style={styles.username}>{post.username} <span style={styles.days}>{post.days}</span></span>
+                            <span style={styles.userHandle}>{post.userHandle}</span>
+                        </div>
                     </div>
                     <img src={post.imageUrl} alt="Post" style={styles.postImage} />
                     <div style={styles.postContent}>
@@ -34,14 +39,13 @@ const Discover: React.FC = () => {
                         <span style={styles.likeText}>{post.likes} Me gusta</span>
                         <p style={styles.postDescription}>{post.description}</p>
                         <span style={styles.commentsText}>Ver 10 comentarios</span>
-                        <span style={styles.addCommentText}>Añadir comentario</span> 
+                        <span style={styles.addCommentText}>Añadir comentario</span>
                     </div>
                 </div>
             ))}
         </div>
     );
 };
-//los estilos del post
 
 const styles = {
     container: {
@@ -83,12 +87,22 @@ const styles = {
         fontSize: '16px',
         color: '#ccc',
     } as React.CSSProperties,
+    days: {
+        fontSize: '14px',
+        color: '#888',
+        marginLeft: '8px',
+    } as React.CSSProperties,
+    userHandle: {
+        fontSize: '12px',
+        color: '#888',
+        display: 'block',
+    } as React.CSSProperties,
     postImage: {
         width: '100%',
         borderRadius: '10px',
         marginBottom: '15px',
     } as React.CSSProperties,
-    postContent: {            
+    postContent: {
         padding: '10px 0',
     } as React.CSSProperties,
     postFooter: {
@@ -119,13 +133,13 @@ const styles = {
         fontSize: '12px',
         color: '#888',
         marginTop: '8px',
-        display: 'block', 
+        display: 'block',
     } as React.CSSProperties,
     addCommentText: {
         fontSize: '12px',
         color: '#888',
-        marginTop: '4px', 
-        display: 'block', 
+        marginTop: '4px',
+        display: 'block',
     } as React.CSSProperties,
 };
 
