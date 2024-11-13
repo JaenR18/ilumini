@@ -4,8 +4,8 @@ import { IoChatbubbleOutline, IoNotificationsOutline, IoSearchOutline } from 're
 import starLogo from '../images/logoStar.png';
 import profilePic from '../images/me.jpg';
 import theme from '../theme';
+import userPic from '../images/user.jpg';
 //aun falta componer header spaces
-//pic user en el main de sms
 //add scren de comments?
 //add info en el user del post
 const Header: React.FC = () => {
@@ -49,17 +49,22 @@ const Header: React.FC = () => {
                     <div style={theme.messageTitle}>Mensajería</div>
                     <div style={theme.messageSearchContainer}>
                         <IoSearchOutline style={theme.searchIcon} />
-                        <input type="search" style={theme.messageSearchInput} /> 
+                        <input type="search" style={theme.messageSearchInput} />
                     </div>
-                    {Array(3).fill(null).map((_, index) => (    //arreglo de sms
+                    {Array(3).fill(null).map((_, index) => (
                         <div key={index} style={theme.messageItem}>
-                            <div style={theme.messageUser}>Montelimar</div>
-                            <p style={theme.messageText}>El precio de la habitacion hoy es...</p>
-                            <span style={theme.messageDate}>3 días</span> 
+                            <div style={theme.messageHeader}>
+                                <img src={userPic} alt="Profile" style={theme.profileCircle} /> 
+                                <div style={theme.messageUser}>Montelimar</div>
+                            </div>
+                            <p style={theme.messageText}>El precio de la habitación hoy es...</p>
+                            <span style={theme.messageDate}>3 días</span>
                         </div>
                     ))}
                 </div>
             )}
+
+
         </header>
     );
 };

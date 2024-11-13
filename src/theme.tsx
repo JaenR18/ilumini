@@ -158,6 +158,20 @@ const theme = {
         alignSelf: 'flex-end',
         marginTop: '2px',
     } as React.CSSProperties,
+    //part foto sms
+    profileCircle: {
+        width: '30px',  
+        height: '30px',
+        borderRadius: '50%',
+        marginRight: '8px',
+    } as React.CSSProperties,
+    messageHeader: {
+        display: 'flex',
+        alignItems: 'center',
+        marginBottom: '5px', // space foto y text user
+    } as React.CSSProperties,
+    
+
 
 
 };
